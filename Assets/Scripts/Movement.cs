@@ -23,14 +23,14 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetKey("D"))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
             fLegRB.AddForce(Vector2.left * (speed * 1000) * Time.deltaTime);
             anim.Play("WalkRight");
                 StartCoroutine(MoveRight(stepWait));
             Debug.Log("aa");
             }
-            if (Input.GetKey("A"))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 anim.Play("WalkLeft");
                 StartCoroutine(MoveLeft(stepWait));

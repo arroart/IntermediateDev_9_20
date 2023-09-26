@@ -16,6 +16,6 @@ public class Balance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRotation, force * Time.deltaTime));
+        rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRotation, force * Time.fixedDeltaTime));
     }
 }
